@@ -12,14 +12,16 @@
 //
 //
 
-m := System args at(1) asNumber floor
-n := System args at(2) asNumber floor
+if(System args size == 3,
+  m := System args at(1) asNumber floor
+  n := System args at(2) asNumber floor
 
-if(m <= 0  or  n <= 0,
-  "Corrupt" println,
-  if(m % n == 0  or  n % m == 0,
-    "True" println,
-    "False" println
+  if(m <= 0  or  n <= 0,
+    "Corrupt" println,
+    if(m % n == 0  or  n % m == 0,
+      "True" println,
+      "False" println
+    )
   )
 )
 
